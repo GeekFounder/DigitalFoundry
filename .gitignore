@@ -1,0 +1,36 @@
+# Dependencies
+node_modules/
+.next/
+
+# Environment files
+.env*.local
+
+# Logs
+tsconfig.tsbuildinfo
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Build output
+out/
+
+# Debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS
+.DS_Store
+
+# Testing
+coverage/
+
+# Supabase
+.supabase/
+
+# Misc
+.DS_Store
+*.local
