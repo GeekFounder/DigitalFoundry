@@ -1,24 +1,11 @@
+#:schema node_modules/wrangler/config-schema.json
 name = "digital-foundry"
-type = "javascript"
-account_id = "your-cloudflare-account-id"
-workers_dev = true
-route = ""
-zone_id = ""
-
-[site]
-bucket = ".next/static"
-entry-point = ".next"
-
-[build]
-command = "npm run build"
-[build.upload]
-format = "service-worker"
-
-# Cloudflare Pages configuration
 compatibility_date = "2024-05-02"
 compatibility_flags = ["nodejs_compat"]
+pages_build_output_dir = ".vercel/output/static"
 
-# Environment variables for production
-[env.production]
+[vars]
+# Add placeholders for environment variables
+# It's recommended to set these in the Cloudflare Dashboard instead
 NEXT_PUBLIC_SUPABASE_URL = "your-supabase-url"
 NEXT_PUBLIC_SUPABASE_ANON_KEY = "your-supabase-anon-key"
