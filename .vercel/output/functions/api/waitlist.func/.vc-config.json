@@ -1,0 +1,18 @@
+{
+  "runtime": "edge",
+  "name": "api/waitlist",
+  "deploymentTarget": "v8-worker",
+  "entrypoint": "index.js",
+  "assets": [],
+  "framework": {
+    "slug": "nextjs",
+    "version": "15.1.0"
+  },
+  "environment": {
+    "__NEXT_BUILD_ID": "q-Mo4skXSPZ-rFdmw6P4d",
+    "NEXT_SERVER_ACTIONS_ENCRYPTION_KEY": "nuwk/xCR1cPSnipNImsm4e5PfxzDvxoUQ5GydErQPHI=",
+    "__NEXT_PREVIEW_MODE_ID": "f3127e884c5912c74511dfac28be75dc",
+    "__NEXT_PREVIEW_MODE_ENCRYPTION_KEY": "898ec53837804d26e8507b8c37176d0ab63be6bf88f9130bed7eaa1410a8d97d",
+    "__NEXT_PREVIEW_MODE_SIGNING_KEY": "920d8dba248904d2adb1f0db49ee7d9af3ea013b46310d068ef2ccfb35f04700"
+  }
+}
