@@ -2,7 +2,7 @@
 name = "digital-foundry"
 compatibility_date = "2024-05-02"
 compatibility_flags = ["nodejs_compat"]
-pages_build_output_dir = ".vercel/output/static"
+pages_build_output_dir = ".vercel/output"
 
 [vars]
 # Add placeholders for environment variables
