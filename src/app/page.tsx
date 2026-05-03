@@ -252,7 +252,7 @@ export default function Home() {
       </section>
 
       {/* Footer CTA */}
-      <section className="bg-blue-600 py-20">
+      <section className="bg-[#0F0F1A] py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Join podcasters landing real sponsor dollars. Waitlist now.
@@ -290,7 +290,7 @@ export default function Home() {
           <div className="flex flex-col items-center gap-4">
             <Image src="/logo.svg" alt="Digital Foundry" width={140} height={30} />
             <p className="text-gray-400">
-              © {new Date().getFullYear()} Podcast Media Kit Generator. All rights reserved.
+              © 2026 Digital Foundry. All rights reserved.
             </p>
           </div>
         </div>
