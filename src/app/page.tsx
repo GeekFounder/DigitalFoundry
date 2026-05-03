@@ -40,6 +40,13 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      {/* Header */}
+      <header className="bg-[#0F0F1A] py-4 px-6">
+        <div className="max-w-7xl mx-auto flex items-center justify-between">
+          <Image src="/logo.svg" alt="Digital Foundry" width={180} height={38} />
+        </div>
+      </header>
+
       {/* Hero Section */}
       <section className="bg-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -83,6 +90,39 @@ export default function Home() {
                 </p>
               )}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Waitlist CTA Section */}
+      <section className="bg-gradient-to-r from-purple-900 to-indigo-900 py-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Get early access — 50% off at launch
+          </h2>
+          <div className="max-w-md mx-auto">
+            <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+                className="flex-1 px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500"
+              />
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 disabled:opacity-50"
+              >
+                {isSubmitting ? "Joining..." : "Join Waitlist"}
+              </button>
+            </form>
+            {message && (
+              <p className={`mt-4 ${message.type === "success" ? "text-green-200" : "text-red-200"}`}>
+                {message.text}
+              </p>
+            )}
           </div>
         </div>
       </section>
@@ -174,21 +214,40 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Social Proof */}
-      <section className="bg-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-lg text-gray-600 mb-4">
-            "Doubled sponsor replies overnight!" – Beta podcaster
-          </p>
-        </div>
-      </section>
-
       {/* Pricing */}
-      <section className="bg-gray-100 py-20">
+      <section className="bg-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Waitlist LTD: $49 (save $50)
           </h2>
+          <div className="max-w-md mx-auto mt-8">
+            <ul className="space-y-3 text-left text-gray-700 bg-gray-50 p-6 rounded-lg">
+              <li className="flex items-center">
+                <svg className="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+                Live Spotify & Apple Podcast Analytics
+              </li>
+              <li className="flex items-center">
+                <svg className="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+                5 Sponsor-Approved Pro Templates
+              </li>
+              <li className="flex items-center">
+                <svg className="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+                Shareable Live Links (No PDF attachments)
+              </li>
+              <li className="flex items-center">
+                <svg className="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+                Custom Branded Domains
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
 
@@ -226,11 +285,14 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-gray-400">
-            © {new Date().getFullYear()} Podcast Media Kit Generator. All rights reserved.
-          </p>
+      <footer className="bg-[#0F0F1A] text-white py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col items-center gap-4">
+            <Image src="/logo.svg" alt="Digital Foundry" width={140} height={30} />
+            <p className="text-gray-400">
+              © {new Date().getFullYear()} Podcast Media Kit Generator. All rights reserved.
+            </p>
+          </div>
         </div>
       </footer>
     </div>
