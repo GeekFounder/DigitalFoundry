@@ -33,8 +33,8 @@ This is the validation landing page for the Podcast Media Kit Generator. The goa
 3. Set up environment variables:
    Copy `.env.local.example` to `.env.local` and update with your Supabase credentials:
    ```env
-   NEXT_PUBLIC_SUPABASE_URL=https://axdkcvyfveuyjfzsymce.supabase.co
-   NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+   NEXT_PUBLIC_SUPABASE_URL=YOUR_SUPABASE_URL
+   NEXT_PUBLIC_SUPABASE_ANON_KEY=YOUR_SUPABASE_ANON_KEY
    ```
 
 ### Supabase Setup
