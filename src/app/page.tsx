@@ -47,18 +47,18 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-[#0F0F1A]">
       {/* Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-[#0F0F1A] border-b border-white/10 py-4 px-6">
-        <div className="max-w-6xl mx-auto flex items-center justify-between">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-[#0F0F1A] border-b border-white/10 py-4 px-4 sm:px-6">
+        <div className="max-w-6xl mx-auto flex items-center justify-between gap-3 min-w-0">
           <Image
             src="/logo.svg"
             alt="Digital Foundry"
             width={160}
             height={34}
-            className="h-auto w-auto"
+            className="h-auto w-[132px] sm:w-[160px]"
           />
           <a
             href="#pricing"
-            className="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-5 rounded-lg transition text-sm"
+            className="max-[374px]:hidden bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded-full transition text-sm whitespace-nowrap"
           >
             Get Early Access
           </a>
