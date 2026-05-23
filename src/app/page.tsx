@@ -25,7 +25,7 @@ export default function Home() {
       const data = await response.json();
 
       if (response.ok) {
-        setMessage({ type: "success", text: "Thanks for joining the waitlist! We'll be in touch soon." });
+        setMessage({ type: "success", text: "Thanks for joining the Veldt Pitch waitlist! We'll be in touch soon. — The Veldt Team" });
         setEmail("");
       } else {
         setMessage({ type: "error", text: data.error || "Failed to join waitlist. Please try again." });
@@ -45,20 +45,19 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#0F0F1A]">
+    <div className="min-h-screen bg-[#0F172A]">
       {/* Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-[#0F0F1A] border-b border-white/10 py-4 px-4 sm:px-6">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-[#0F172A] border-b border-white/10 py-4 px-4 sm:px-6">
         <div className="max-w-6xl mx-auto flex items-center justify-between gap-3 min-w-0">
-          <Image
-            src="/logo.svg"
-            alt="Digital Foundry"
-            width={160}
-            height={34}
-            className="h-auto w-[132px] sm:w-[160px]"
+          <img
+            src="/veldt-logo.svg"
+            alt="Veldt"
+            height={32}
+            className="h-[32px] w-auto"
           />
           <a
             href="#pricing"
-            className="max-[374px]:hidden bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded-full transition text-sm whitespace-nowrap"
+            className="max-[374px]:hidden bg-[#C4785A] hover:bg-[#B36A4F] text-white font-semibold py-2 px-4 rounded-full transition text-sm whitespace-nowrap"
           >
             Get Early Access
           </a>
@@ -66,16 +65,16 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section className="bg-[#0F0F1A] pt-32 pb-20 px-4 sm:px-6">
+      <section className="bg-[#0F172A] pt-32 pb-20 px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[72px] font-bold text-white leading-tight mb-6 px-2">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[72px] font-bold text-[#F8FAFC] leading-tight mb-6 px-2">
               Stop sending ugly PDFs to sponsors.
             </h1>
-            <p className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed px-4">
+            <p className="text-lg sm:text-xl md:text-2xl text-[#94A3B8] mb-8 max-w-3xl mx-auto leading-relaxed px-4">
               Generate live, professional media kits in 2 minutes. Impress brands with real analytics — land sponsors faster.
             </p>
-            <div className="mb-12 rounded-xl overflow-hidden shadow-2xl shadow-purple-900/20 px-4 sm:px-0">
+            <div className="mb-12 rounded-xl overflow-hidden shadow-2xl shadow-orange-900/10 px-4 sm:px-0">
               <img
                 src="/landing-page-hero.png"
                 alt="Split-screen: Cringe Canva PDF vs. stunning interactive kit"
@@ -92,12 +91,12 @@ export default function Home() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
-                  className="flex-1 px-5 py-4 rounded-xl border border-white/20 bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent text-base sm:text-lg"
+                  className="flex-1 px-5 py-4 rounded-xl border border-white/20 bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#C4785A] focus:border-transparent text-base sm:text-lg"
                 />
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-8 rounded-xl transition duration-300 disabled:opacity-50 text-base sm:text-lg whitespace-nowrap"
+                  className="bg-[#C4785A] hover:bg-[#B36A4F] text-white font-bold py-4 px-8 rounded-xl transition duration-300 disabled:opacity-50 text-base sm:text-lg whitespace-nowrap"
                 >
                   {isSubmitting ? "Joining..." : "Join Waitlist →"}
                 </button>
@@ -171,13 +170,13 @@ export default function Home() {
       </section>
 
       {/* Pricing */}
-      <section id="pricing" className="bg-[#0F0F1A] py-16 sm:py-20 px-4 sm:px-6">
+      <section id="pricing" className="bg-[#0F172A] py-16 sm:py-20 px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-10 sm:mb-12 px-2">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#F8FAFC] mb-4">
               Launch Special — 50% Off
             </h2>
-            <p className="text-base sm:text-lg text-gray-400">Lock in your lifetime discount before we go live.</p>
+            <p className="text-base sm:text-lg text-[#94A3B8]">Lock in your lifetime discount before we go live.</p>
           </div>
           <div className="max-w-lg mx-auto bg-white/5 border border-white/10 rounded-2xl p-6 sm:p-8 md:p-12">
             <div className="text-center mb-8">
@@ -209,12 +208,12 @@ export default function Home() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
-                className="w-full px-5 py-4 rounded-xl border border-white/20 bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 text-base sm:text-lg"
+                className="w-full px-5 py-4 rounded-xl border border-white/20 bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#C4785A] text-base sm:text-lg"
               />
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 rounded-xl transition duration-300 disabled:opacity-50 text-base sm:text-lg"
+                className="w-full bg-[#C4785A] hover:bg-[#B36A4F] text-white font-bold py-4 rounded-xl transition duration-300 disabled:opacity-50 text-base sm:text-lg"
               >
                 {isSubmitting ? "Joining..." : "Secure My Spot"}
               </button>
@@ -230,11 +229,11 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#0F0F1A] border-t border-white/10 py-8 px-6">
+      <footer className="bg-[#0F172A] border-t border-white/10 py-8 px-6">
         <div className="max-w-6xl mx-auto flex flex-col items-center gap-4">
-          <Image src="/logo.svg" alt="Digital Foundry" width={140} height={30} className="h-auto w-auto" />
+          <img src="/veldt-logo.svg" alt="Veldt" height={32} className="h-[32px] w-auto" />
           <p className="text-gray-500 text-sm">
-            © 2026 Digital Foundry. All rights reserved.
+            © 2026 Veldt. All rights reserved.
           </p>
         </div>
       </footer>
